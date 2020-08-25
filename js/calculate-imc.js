@@ -1,4 +1,5 @@
 var patients = document.querySelectorAll('.paciente');
+var btnAddPatient = document.querySelector('#adicionar-paciente');
 
 patients.forEach(patient => {
   var weight = patient.querySelector('.info-peso').textContent;
