@@ -7,6 +7,11 @@ btnAddPatient.addEventListener('click', function(event) {
   var patient = newPatient(form);
   var tr = createTr(patient);
 
+  if (!validatePatient(patient)) {
+    console.log('Dados do paciente inválidos!');
+    return;
+  }
+
   table.appendChild(tr);
   form.reset();
 });
@@ -19,6 +24,10 @@ function newPatient(form) {
     fat:form.fat.value,
     imc: calculateIMC(form.weight.value, form.height.value),
   }
+}
+
+function validatePatient(patient) {
+  return validateWeight(patient.weight) && validateHeight(patient.height);
 }
 
 function createTr(patient) {

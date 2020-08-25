@@ -13,23 +13,23 @@ patients.forEach(patient => {
 });
 
 function calculateIMC(weight, height) {
-  if (isWeightInvalid(weight)) {
+  if (!validateWeight(weight)) {
     return 'Peso inválido';
   }
 
-  if (isHeightInvalid(height)) {
+  if (!validateHeight(height)) {
     return 'Altura inválida';
   }
 
   return (weight / (height * height)).toFixed(2);
 }
 
-function isWeightInvalid(weight) {
-  return weight <= 0 || weight >= 500;
+function validateWeight(weight) {
+  return weight > 0 && weight < 400;
 }
 
-function isHeightInvalid(height) {
-  return height <= 0 || height >= 4.00;
+function validateHeight(height) {
+  return height > 0 && height < 3.00;
 }
 
 function getLineColorClass(imc) {
