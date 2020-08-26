@@ -153,7 +153,8 @@ button[disabled=disabled], button:disabled {
   background-color: #ccc;
 }
 
-#error-messages {
+#error-messages,
+#update-list-error {
   color: #ff0000;
 }
 
@@ -162,6 +163,6 @@ button[disabled=disabled], button:disabled {
   transition: 0.5s;
 }
 
-.hidden-patient {
+.hidden {
   display: none;
 }

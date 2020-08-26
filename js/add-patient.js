@@ -1,11 +1,9 @@
 btnAddPatient.addEventListener('click', function(event) {
   event.preventDefault();
 
-  var table = document.querySelector('#tabela-pacientes');
   var form = document.querySelector('#id-add-patient');
 
   var patient = newPatient(form);
-  var tr = createTr(patient);
   var errors = validate(patient);
 
   if (errors.length > 0) {
@@ -13,7 +11,8 @@ btnAddPatient.addEventListener('click', function(event) {
     return;
   }
 
-  table.appendChild(tr);
+  addPatientInTheTable(patient);
+
   form.reset();
 });
 
@@ -25,6 +24,13 @@ function newPatient(form) {
     fat:form.fat.value,
     imc: calculateIMC(form.weight.value, form.height.value),
   }
+}
+
+function addPatientInTheTable(patient) {
+  var table = document.querySelector('#tabela-pacientes');
+  var tr = createTr(patient);
+
+  table.appendChild(tr);
 }
 
 function createTr(patient) {
