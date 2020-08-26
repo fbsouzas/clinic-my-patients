@@ -152,3 +152,7 @@ button[disabled=disabled], button:disabled {
 .imc-invalid {
   background-color: #ccc;
 }
+
+#error-messages {
+  color: #ff0000;
+}

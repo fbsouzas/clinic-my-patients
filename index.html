@@ -7,7 +7,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
-
 </head>
 
 <body>
@@ -82,6 +81,9 @@
 
   <section class="container">
     <h2 id="titulo-form">Adicionar novo paciente</h2>
+
+    <ul id="error-messages"></ul>
+
     <form id="id-add-patient">
       <div class="grupo">
         <label for="name">Nome:</label>
@@ -89,15 +91,15 @@
       </div>
       <div class="grupo">
         <label for="weight">Peso:</label>
-        <input type="text" id="weight" name="weight" placeholder="digite o peso do seu paciente" class="campo campo-medio">
+        <input type="number" id="weight" name="weight" placeholder="digite o peso do seu paciente" class="campo campo-medio">
       </div>
       <div class="grupo">
         <label for="height">Altura:</label>
-        <input type="text" id="height" name="height" placeholder="digite a altura do seu paciente" class="campo campo-medio">
+        <input type="number" id="height" name="height" placeholder="digite a altura do seu paciente" class="campo campo-medio">
       </div>
       <div class="grupo">
         <label for="fat">% de Gordura:</label>
-        <input type="text" id="fat" name="fat" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+        <input type="number" id="fat" name="fat" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
       </div>
 
       <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
@@ -105,7 +107,7 @@
   </section>
 
   <script src="js/calculate-imc.js"></script>
-  <script src="js/form.js"></script>
+  <script src="js/add-patient.js"></script>
 </body>
 
 </html>
